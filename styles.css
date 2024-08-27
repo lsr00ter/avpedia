@@ -102,3 +102,15 @@ button {
     width: 100%; /* 宽度 */
     box-sizing: border-box; /* 包含内边距和边框在内的宽度计算 */ 
 }
+.process-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.process-name {
+    font-family: monospace;
+}
+.red-link {
+    color: red; /* 设置链接为红色 */
+}

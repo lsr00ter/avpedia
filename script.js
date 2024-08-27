@@ -31,13 +31,8 @@ document.getElementById('inputForm').addEventListener('submit', function (event)
 
             // 新增：排序匹配结果
             matches.sort((a, b) => a.softwareName.localeCompare(b.softwareName));
-            let lastSoftwareName = ''; // 新增：存储上一个软件名称
             matches.forEach(match => {
-                // 检查当前软件名称是否与上一个相同
-                const displaySoftwareName = (match.softwareName === lastSoftwareName) ? ' \_ ' : match.softwareName;
-                // result += `<strong>${displaySoftwareName}:</strong> ${match.process} ==> <a href='${match.url}' target='_blank'>${match.url}</a><br>`;
-                result += `<strong>${displaySoftwareName}:</strong> <span style="font-family: monospace;">${match.process}</span> ==> <a href='${match.url}' target='_blank'>${match.url}</a><br>`;
-                lastSoftwareName = match.softwareName; // 更新上一个软件名称
+                result += `<div class="process-item"><span class="process-name">${match.process}</span><a class="red-link" href='${match.url}' target='_blank'><strong>${match.softwareName}</strong></a></div><br>`;
             });
 
         }
