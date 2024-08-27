@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* background-color: #f0f0f0; */
+}
+.container {
+    width: 60%;
+    max-width: 800px;
+    padding: 40px;
+    text-align: center;
+    /* background-color: white; */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+button {
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+.submit-button:hover {
+    background-color: #45a049;
+}
+.clear-button {
+    background-color: #f44336;
+    color: white;
+}
+.clear-button:hover {
+    background-color: #e53935;
+}
+.copy-button {
+    background-color: #008CBA;
+    color: white;
+}
+.copy-button:hover {
+    background-color: #007B9A;
+}
+.result {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    text-align: left;
+}
+.result p {
+    text-align: center; /* 每行内容居中显示 */
+    margin: 5px 0;
+}
+/* #commandInput {
+    width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+} */
+#commandInput {
+    margin-top: 10px;
+    font-family: 'Courier New', 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; /* 设置兼容的等宽字体 */
+    font-size: 14px; /* 字体大小 */
+    padding: 5px; /* 内边距 */
+    border: 1px solid #ccc; /* 边框样式 */
+    border-radius: 4px; /* 圆角 */
+    width: 100%; /* 宽度 */
+    box-sizing: border-box; /* 包含内边距和边框在内的宽度计算 */
+}
+#user_input {
+    font-family: 'Courier New', 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; /* 设置兼容的等宽字体 */
+    font-size: 14px; /* 字体大小 */
+    padding: 5px; /* 内边距 */
+    border: 1px solid #ccc; /* 边框样式 */
+    border-radius: 4px; /* 圆角 */
+    width: 100%; /* 宽度 */
+    box-sizing: border-box; /* 包含内边距和边框在内的宽度计算 */ 
+}

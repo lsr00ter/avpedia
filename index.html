@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <link rel="icon" href="images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杀毒软件进程在线识别 Fork</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> <!-- 引入外部 JavaScript 文件 -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>杀毒软件进程在线识别</h1>
+        <div>Deployed on GitHub Pages</div>
+        <input type="text" id="commandInput" value="tasklist /SVC" readonly>
+        <form id="inputForm">
+            <textarea name="user_input" id="user_input" placeholder="在此输入 tasklist /SVC 命令的执行结果..."></textarea>
+            <div class="button-group">
+                <button type="submit" class="submit-button">提交</button>
+                <button type="button" class="clear-button" onclick="clearTextarea()">清空</button>
+            </div>
+        </form>
+
+        </br>
+        <div class="result" id="result"></div>
+        <h3>欢迎补充提交杀毒软件进程信息：<a href="https://github.com/lsr00ter/avpedia">https://github.com/lsr00ter/avpedia</a>
+        </h3>
+
+        <!-- 暂未找到合适的方式更新项目版本 -->
+        <!-- <h4>项目版本号 V1.5-2024.08</h4> -->
+    </div>
+</body>
+
+</html>
