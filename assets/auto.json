@@ -309,6 +309,7 @@
     },
     "McAfee(迈克菲)": {
         "processes": [
+            "md.exe",
             "Mcshield.exe",
             "Tbmon.exe",
             "Frameworkservice.exe",
