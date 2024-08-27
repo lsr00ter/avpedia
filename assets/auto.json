@@ -515,11 +515,26 @@
     },
     "TrendMicro": {
         "processes": [
-            "TMBMSRV.exe",
+            "ATASAgent.exe",
+            "CNTAoSMgr.exe",
+            "dsagent.exe",
+            "ESClient.exe",
+            "ESEFrameworkHost.exe",
+            "ESEServiceShell.exe",
+            "iVPAgent.exe",
+            "LogServer.exe",
             "ntrtscan.exe",
+            "Ntrtscan.exe",
+            "PccNTMon.exe",
             "Pop3Trap.exe",
-            "WebTrap.exe",
-            "PccNTMon.exe"
+            "TMBMSRV.exe",
+            "TMCCSF.exe",
+            "TMiACAgentSvc.exe",
+            "TmListen.exe",
+            "TmPfw.exe",
+            "TmsaInstance64.exe",
+            "TmSSClient.exe",
+            "WebTrap.exe"
         ],
         "url": "http://careers.trendmicro.com.cn/"
     },
@@ -907,6 +922,8 @@
     },
     "安天智甲": {
         "processes": [
+            "AtTray.exe",
+            "kDocSecurity.exe",
             "kxetray.exe",
             "kscan.exe",
             "AMediumManager.exe",
@@ -936,6 +953,7 @@
             "kxecenter.exe",
             "kxemain.exe",
             "KWatch.exe",
+            "ksafe.exe",
             "KSafeSvc.exe",
             "KSafeTray.exe"
         ],
@@ -1771,8 +1789,9 @@
         ],
         "url": ""
     },
-    "腾讯云安全": {
+    "腾讯云安全（腾讯云镜）": {
         "processes": [
+            "QCloudService.exe",
             "BaradAgent.exe",
             "sgagent.exe",
             "YDService.exe",
@@ -1946,6 +1965,8 @@
     },
     "天融信终端防御": {
         "processes": [
+            "TopsecDaemon.exe",
+            "topsecusysdiag.exe",
             "TopsecMain.exe",
             "TopsecTray.exe"
         ],
@@ -2074,5 +2095,26 @@
             "PccNTUpd.exe"
         ],
         "url": "https://asiainfo-sec.com/product/detail-122.html"
+    },
+    "泰合安全管理平台(TSOC)": {
+        "processes": [
+            "TSocSensor.exe"
+        ],
+        "url": "https://www.venustech.com.cn/new_type/aqglpt/"
+    },
+    "景云防病毒": {
+        "processes": [
+            "JingYunMonSvr.exe",
+            "JingyunSdMainSvr.exe",
+            "JingyunSdSvr.exe",
+            "JingyunSdTray.exe"
+        ],
+        "url": "https://www.venustech.com.cn/new_type/aqglpt/"
+    },
+    "360 企业安全云": {
+        "processes": [
+            "360EntMsgCenter.exe"
+        ],
+        "url": ""
     }
 }

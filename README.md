@@ -8,7 +8,7 @@
 
 本项目就是做一款长期维护的在线杀软识别网站，帮助各位师傅在内网渗透中更进一步~
 
-![Antivirus-Scan-1](./img/Antivirus-Scan-1.png)
+![Antivirus-Scan-1](./img/Screenshot.png)
 
 ## 📝 TODO
 
@@ -29,4 +29,4 @@
 
 ## 🙏 感谢各位师傅
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Aabyss-Team/Antivirus-Scan&type=Date)](https://star-history.com/#Aabyss-Team/Antivirus-Scan&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=lsr00ter/avpedia&type=Date)](https://star-history.com/#lsr00ter/avpedia&Date)
