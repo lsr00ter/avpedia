@@ -111,6 +111,9 @@ button {
 .process-name {
     font-family: monospace;
 }
+.sub-process-name {
+    align-items: right;
+}
 .red-link {
     color: red; /* 设置链接为红色 */
 }

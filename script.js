@@ -11,6 +11,7 @@ document.getElementById('inputForm').addEventListener('submit', function (event)
     const input = document.getElementById('user_input').value;
     const lines = input.split("\n");
     let result = '';
+    const matches = {}; // 新增：存储匹配结果
 
     // 遍历每一行输入
     lines.forEach(line => {
@@ -22,25 +23,50 @@ document.getElementById('inputForm').addEventListener('submit', function (event)
             const url = jsonData[softwareName].url;
 
             // 检查是否包含指定的进程名，且匹配行的开头
-            const matches = []; // 新增：存储匹配结果
             processes.forEach(process => {
                 if (line.toLowerCase().startsWith(process.toLowerCase())) { // 忽略大小写
-                    matches.push({ process, softwareName, url }); // 新增：保存匹配信息
+                    if (!matches[softwareName]) {
+                        matches[softwareName] = { "processes": [], "url": "" }; // 如果不存在，初始化为空数组
+                        matches[softwareName]["url"] = url;
+                    }
+                    if (!matches[softwareName]["processes"].includes(process)) {
+                        matches[softwareName]["processes"].push(process);
+                    }
                 }
             });
-
-            // 新增：排序匹配结果
-            matches.sort((a, b) => a.softwareName.localeCompare(b.softwareName));
-            matches.forEach(match => {
-                result += `<div class="process-item"><span class="process-name">${match.process}</span><a class="red-link" href='${match.url}' target='_blank'><strong>${match.softwareName}</strong></a></div><br>`;
-            });
-
         }
     });
+    // 对 matches 对象进行排序
+    const sortedKeys = Object.keys(matches).sort(); // 获取排序后的键
+    const sortedMatches = {}; // 创建一个新的对象来存储排序后的结果
+    sortedKeys.forEach(key => {
+        sortedMatches[key] = matches[key]; // 将排序后的键值对添加到新对象
+    });
+    Object.assign(matches, sortedMatches); // 更新原始 matches 对象
+    console.log(matches);
 
-    // 如果没有匹配项
-    if (result === '') {
+    // 判断 matches 是否为空
+    if (Object.keys(matches).length === 0) {
+        console.log("matches is empty.");
         result = "未找到匹配的进程";
+    } else {
+        console.log("matches is not empty."); // matches 不为空
+        // 遍历 matches
+        for (const softwareName in matches) {
+            if (matches.hasOwnProperty(softwareName)) {
+                result += `<div class="process-item"><span class="software-name"><a class="red-link" href='${matches[softwareName]["url"]}' target='_blank'><strong>${softwareName}</strong></a></span><span class="process-name">${matches[softwareName]["processes"][0]}</span></div><br>`;
+                // 遍历 processes 列表并逐行输出
+                console.log(`Software: ${softwareName}`);
+                console.log(`\\---  Process: ${matches[softwareName]["processes"][0]}`);
+                const processes = matches[softwareName]["processes"];
+                if (processes.length > 1) {    // 确保有至少两个元素
+                    processes.slice(1).forEach(process => { // 从第二个元素开始
+                        result += `<div class="process-item"><span class="software-name"></span><span class="sub-process-name">${process}</span></div><br>`;
+                        console.log(`\\---  Process: ${process}`); // 缩进以示层级
+                    });
+                }
+            }
+        }
     }
 
     document.getElementById('result').innerHTML = result; // 显示结果
