@@ -285,7 +285,8 @@
             "kavfs.exe",
             "klnagent.exe",
             "kavtray.exe",
-            "kavfswp.exe"
+            "kavfswp.exe",
+            "kaspersky.exe"
         ],
         "url": "https://www.kaspersky.com"
     },
@@ -712,7 +713,8 @@
             "nmain.exe",
             "nprotect.exe",
             "smcGui.exe",
-            "ns.exe"
+            "ns.exe",
+            "nortonsecurity.exe"
         ],
         "url": "https://us.norton.com/"
     },
