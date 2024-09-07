@@ -1,122 +1,152 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    /* background-color: #f0f0f0; */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
+
 .container {
-    width: 60%;
-    max-width: 800px;
-    padding: 40px;
-    text-align: center;
-    /* background-color: white; */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
+
 .container a {
-    word-wrap: break-word;
+  word-wrap: break-word;
 }
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+h3 {
+  font-size: 1.2em;
+  color: #555;
+}
+
+input[type="text"],
 textarea {
-    width: 100%;
-    height: 200px;
-    margin-top: 20px;
-    padding: 15px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: vertical;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
+
+textarea {
+  height: 100px;
+}
+
 .button-group {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
 }
-button {
-    padding: 10px 25px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.submit-button {
-    background-color: #4CAF50;
-    color: white;
-}
-.submit-button:hover {
-    background-color: #45a049;
-}
+
+.submit-button,
 .clear-button {
-    background-color: #f44336;
-    color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-.clear-button:hover {
-    background-color: #e53935;
+
+.submit-button {
+  background-color: #28a745;
+  color: white;
 }
-.copy-button {
-    background-color: #008CBA;
-    color: white;
+
+.clear-button {
+  background-color: #dc3545;
+  color: white;
 }
-.copy-button:hover {
-    background-color: #007B9A;
-}
+
+
 .result {
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: #333;
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
-    max-height: 300px;
-    overflow-y: auto;
-    text-align: left;
+  font-family: 'Courier New', 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  line-height: 1.0;
 }
+
 .result p {
-    text-align: center; /* 每行内容居中显示 */
-    margin: 5px 0;
+  text-align: center;
+  /* 每行内容居中显示 */
+  margin: 5px 0;
 }
-/* #commandInput {
-    width: 200px;
-    padding: 10px;
-    margin-top: 10px;
-    text-align: center;
-} */
+
 #commandInput {
-    margin-top: 10px;
-    font-family: 'Courier New', 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; /* 设置兼容的等宽字体 */
-    font-size: 14px; /* 字体大小 */
-    padding: 5px; /* 内边距 */
-    border: 1px solid #ccc; /* 边框样式 */
-    border-radius: 4px; /* 圆角 */
-    width: 100%; /* 宽度 */
-    box-sizing: border-box; /* 包含内边距和边框在内的宽度计算 */
+  margin-top: 10px;
+  font-family: 'Courier New', 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace;
+  /* 设置兼容的等宽字体 */
+  font-size: 14px;
+  /* 字体大小 */
+  padding: 5px;
+  /* 内边距 */
+  border: 1px solid #ccc;
+  /* 边框样式 */
+  border-radius: 4px;
+  /* 圆角 */
+  width: 100%;
+  /* 宽度 */
+  box-sizing: border-box;
+  /* 包含内边距和边框在内的宽度计算 */
 }
+
 #user_input {
-    font-family: 'Courier New', 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace; /* 设置兼容的等宽字体 */
-    font-size: 14px; /* 字体大小 */
-    padding: 5px; /* 内边距 */
-    border: 1px solid #ccc; /* 边框样式 */
-    border-radius: 4px; /* 圆角 */
-    width: 100%; /* 宽度 */
-    box-sizing: border-box; /* 包含内边距和边框在内的宽度计算 */ 
+  font-family: 'Courier New', 'Consolas', 'Menlo', 'Monaco', 'Ubuntu Mono', monospace;
+  /* 设置兼容的等宽字体 */
+  font-size: 14px;
+  /* 字体大小 */
+  padding: 5px;
+  /* 内边距 */
+  border: 1px solid #ccc;
+  /* 边框样式 */
+  border-radius: 4px;
+  /* 圆角 */
+  width: 100%;
+  /* 宽度 */
+  box-sizing: border-box;
+  /* 包含内边距和边框在内的宽度计算 */
 }
+
 .process-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .process-name {
-    font-family: monospace;
+  font-family: monospace;
 }
+
 .sub-process-name {
-    align-items: right;
+  align-items: right;
 }
+
 .red-link {
-    color: red; /* 设置链接为红色 */
+  color: red;
+  /* 设置链接为红色 */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
